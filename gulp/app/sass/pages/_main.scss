@@ -1,0 +1,144 @@
+
+.wrapper {
+    .header {
+        @extend .header;
+    }
+
+    .content {
+        width:100%;
+        order:2;
+        
+        .promotion {
+            position:relative;
+            h3 {
+               position: absolute;
+                top: 25%;
+                margin:  auto;
+                color:white;
+                font-size:7em;
+                
+            }  
+        }
+        .routes {
+            @include basic-width-and-margin(90%,20px auto);
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,1fr);
+            grid-gap: 20px;
+            .popRoutes {
+                grid-area:1/1/2/3;
+                h3 {
+                    font-size:24px;
+                }
+                p {
+                    margin:2px auto;
+                    font-size:16px;
+                }
+            }
+
+            .routeImg1 {
+               grid-area:2/1/span 2/2;
+               position: relative;
+
+               p{
+                opacity: 0;
+                position:absolute;
+                width:100%;
+                font-size: 30px;
+                font-weight: 700;
+                text-align: center;
+                 color: #fff;
+               }
+            }
+
+            .routeImg2:hover p.routeImg1:hover p{
+                opacity: 1;
+                background: rgba(0,0,0,0.5);
+            }
+            .routeImg2 {
+               grid-area:2/2/3/3;
+               position: relative;
+
+               p{
+                opacity: 0;
+                position:absolute;
+                width:100%;
+                font-size: 30px;
+                font-weight: 700;
+                text-align: center;
+                 color: #fff;
+               }
+              
+            }
+
+            .routeImg3{
+               grid-area:3/2/4/3;
+               
+            }
+
+            .routeImg4 {
+               grid-area:1/3/span 2/span 2;
+            }
+
+            .routeImg5{
+                grid-area:3/3/4/4;
+            }
+
+            .routeImg6 {
+               grid-area:3/4/4/5;
+            }
+
+        }
+
+        .usefulArticles {
+            @include basic-width-and-margin(90%,20px auto);
+            display:grid;
+            grid-gap:20px;
+            grid-template-rows:100px 1fr 100px;
+            grid-template-columns: repeat(3,1fr);
+
+            h2 {
+                @include grid-element-position(1,2);
+                font-size:30px;
+            }
+            .articleBlock1 {
+                @include grid-element-position(2,1/2);
+
+            }
+            .articleBlock2{
+                @include grid-element-position(2,2/3);
+              
+            }
+            .articleBlock3 {
+                @include grid-element-position(2,3/4);
+            }
+            .articleBlock1,.articleBlock2,.articleBlock3 {
+                @include link-effects(black,$color-palette2);
+                box-shadow: 5px 5px 5px $color-palette1;
+            }
+
+            .articleBlock1 a,.articleBlock2 a,.articleBlock3 a {
+                margin-top:3px;
+                font-size:26px;
+                text-decoration: none;
+
+            }
+
+
+            .button {
+                @include grid-element-position(3,2);
+                @include link-effects(black,$color-palette2);
+                font-size:24px;
+            }
+        }
+
+    }
+       .info,.projects,.logo,.socialNet,.button ,.usefulArticles h2,.promotion h3,.mainMenu li {
+        text-align: center;
+       } 
+
+       .popRoutes p {
+        @include font-settings(16px,Arial);
+       }
+
+}

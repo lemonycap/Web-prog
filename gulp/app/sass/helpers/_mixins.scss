@@ -1,0 +1,39 @@
+
+@mixin grid-element-position($row,$column) {
+    grid-row:$row;
+    grid-column:$column;
+}
+
+
+@mixin grid-areas($row-start,$column-start,$row-end,$column-end) {
+    grid-area:$row-start/$column-start/$row-end/$column-end;
+}
+
+@mixin basic-width-and-margin($width,$margin)
+{
+    width:$width;
+    margin:$margin;
+}
+
+@mixin font-settings($size,$font-style)
+{
+    font-size: $size;
+    font-family: $font-style;
+}
+
+@mixin link-effects($color-1,$background-color)
+{
+    a{
+        text-decoration: none;
+        &:visited {
+            color:$color-1;
+        }
+        &:active {
+            color:$color-1;
+        }
+        &:hover{
+            border-bottom:2px solid $background-color;
+        }
+    }
+}
+

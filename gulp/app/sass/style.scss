@@ -1,0 +1,59 @@
+
+@import "helpers/_variables";
+@import "helpers/mixins";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+@import "pages/main";
+@import "pages/generalInfoPage";
+@import "pages/searchPage";
+
+
+
+/*Common settings*/
+ 
+body {
+    background-color: white ;
+   width:100%;
+   overflow-x:  hidden;
+}
+
+.backimage {
+    max-width: 100%;
+}
+
+
+.wrapper,.wrapper2,.wrapper3 {
+    background-color: $background-wrapper-color;
+    @include basic-width-and-margin(100%,0px auto);
+    @extend %grid-wrapper;
+}
+
+
+.wrapper .content,.wrapper2 .mainPart,.wrapper3 .main {
+    order:2;
+   // border-bottom: 1px solid;
+}
+.wrapper3 footer {
+    @extend .footer;
+}
+
+
+/*Main page*/
+
+.wrapper {
+  @extend .wrapper;   
+}
+
+/*Search page*/ 
+.wrapper2 { 
+   @extend .wrapper2;
+}
+
+/*General  info page*/
+.wrapper3{
+    @extend .wrapper3;
+}
+
+
+
