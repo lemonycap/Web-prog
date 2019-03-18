@@ -18,15 +18,13 @@ body {
    overflow-x:  hidden;
 }
 
-.backimage {
-    max-width: 100%;
-}
+
 
 
 .wrapper,.wrapper2,.wrapper3 {
     background-color: $background-wrapper-color;
     @include basic-width-and-margin(100%,0px auto);
-    @extend %grid-wrapper;
+    @extend .grid-wrapper;
 }
 
 

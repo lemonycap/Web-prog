@@ -20,6 +20,7 @@
     .logo {
         @include grid-element-position(1,5);
         align-self: center;
+        img {max-width:100%;}
         
      }
     .info {

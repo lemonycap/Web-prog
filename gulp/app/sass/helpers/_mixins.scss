@@ -15,16 +15,33 @@
     margin:$margin;
 }
 
+@mixin background($file) {
+    background-image: url("../images/#{$file}.jpg");
+    background-position: center;
+}
+
 @mixin font-settings($size,$font-style)
 {
     font-size: $size;
     font-family: $font-style;
 }
 
+@mixin quote-settings {
+    h3{
+    position: absolute;
+    top:7%;
+    color:white;
+    width:100%;
+    font-size:5em;
+    text-align: center;
+    }
+}
+
 @mixin link-effects($color-1,$background-color)
 {
     a{
         text-decoration: none;
+       // text-align: center;
         &:visited {
             color:$color-1;
         }
@@ -37,3 +54,24 @@
     }
 }
 
+@mixin title-link-settings {
+    a{
+    @include font-settings(27px, Aerial);
+    display:none;
+    height:30%;
+    width:100%;
+    position:absolute;
+    color:white;
+    bottom:0;
+    text-align: center;
+    text-decoration: none;
+    }
+}
+
+@mixin link-after-block-hover {
+    a{
+    opacity: 0.9;
+    display: block;
+    background: rgba(0,0,0,0.5);
+    }
+}
