@@ -208,9 +208,11 @@
       position: absolute;
       top: 7%;
       color: white;
+      height: 100%;
       width: 100%;
       font-size: 5em;
-      text-align: center; }
+      text-align: center;
+      align-content: center; }
   .wrapper .content .routes {
     width: 90%;
     margin: 20px auto;
@@ -500,9 +502,11 @@
       position: absolute;
       top: 7%;
       color: white;
+      height: 100%;
       width: 100%;
       font-size: 5em;
-      text-align: center; }
+      text-align: center;
+      align-content: center; }
   .wrapper2 .categories-ext-lists {
     width: 100%;
     margin: 20px auto;
