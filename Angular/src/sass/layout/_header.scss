@@ -1,0 +1,33 @@
+
+
+.header {
+ @include font-settings(25px,Arial);
+order:1;
+width:100%;
+border-bottom: 1px solid #ccc;
+font-size:24px;
+display: grid;
+grid-template:100%/repeat(12,1fr);
+align-items: center;
+.logo {
+    @include grid-element-position(1,1);
+    img {max-width:100%;}
+}
+.mainMenu{
+    @include grid-element-position(1,8/span 4);
+    margin-left: auto;
+    align-items: center;
+    
+    li {
+        text-align:center;
+        display:inline-block;
+        padding: .4rem;
+        font-size:22px;
+        @include link-effects(black,$color-palette2);
+        a{
+            padding:10px;
+            text-decoration: none;
+        }
+    }
+}
+}

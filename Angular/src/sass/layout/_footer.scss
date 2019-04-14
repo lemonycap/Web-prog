@@ -1,0 +1,48 @@
+
+
+
+ .footer{
+    @include font-settings(14px,Arial);
+    order:3;
+    width:100%;
+    font-size:18px;
+    display:grid;
+    grid-template:100%/repeat(9,1fr);
+    grid-gap:20px;
+    border-top:1px solid $color-palette2;
+        align-items: stretch;
+
+      //  margin:20px auto;
+    .about {
+        @include grid-element-position(1,2/span 3);
+        justify-content: center;
+     }
+    .logo {
+        @include grid-element-position(1,5);
+        align-self: center;
+        img {max-width:100%;}
+        
+     }
+    .info {
+        @include grid-element-position(1,7);
+        a{
+            display: block;
+            text-decoration: none;
+            color:black;
+           
+        }
+    }
+    .social {
+        @include grid-element-position(1,8/span 2);
+
+        a{
+            display: inline-block;
+        }
+        .socialnet{
+          width: 40px;
+          height:40px;
+        }
+      }
+}
+     
+   

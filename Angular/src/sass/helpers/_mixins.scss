@@ -1,0 +1,79 @@
+
+@mixin grid-element-position($row,$column) {
+    grid-row:$row;
+    grid-column:$column;
+}
+
+
+@mixin grid-areas($row-start,$column-start,$row-end,$column-end) {
+    grid-area:$row-start/$column-start/$row-end/$column-end;
+}
+
+@mixin basic-width-and-margin($width,$margin)
+{
+    width:$width;
+    margin:$margin;
+}
+
+@mixin background($file) {
+    background-image:url("src/assets/images/#{$file}.jpg");
+    background-position: center;
+}
+
+@mixin font-settings($size,$font-style)
+{
+    font-size: $size;
+    font-family: $font-style;
+}
+
+@mixin quote-settings {
+    h3{
+    position: absolute;
+    top:7%;
+    color:white;
+    height:100%;
+    width:100%;
+    font-size:5.5em;
+    text-align: center;
+    align-content: center;
+    }
+}
+
+@mixin link-effects($color-1,$background-color)
+{
+    a{
+        text-decoration: none;
+       // text-align: center;
+        &:visited {
+            color:$color-1;
+        }
+        &:active {
+            color:$color-1;
+        }
+        &:hover{
+            border-bottom:2px solid $background-color;
+        }
+    }
+}
+
+@mixin title-link-settings {
+    a{
+    @include font-settings(27px, Aerial);
+    display:none;
+    height:30%;
+    width:100%;
+    position:absolute;
+    color:white;
+    bottom:0;
+    text-align: center;
+    text-decoration: none;
+    }
+}
+
+@mixin link-after-block-hover {
+    a{
+    opacity: 0.9;
+    display: block;
+    background: rgba(0,0,0,0.5);
+    }
+}

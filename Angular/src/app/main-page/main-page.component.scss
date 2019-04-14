@@ -1,0 +1,105 @@
+@import "src/sass/styles.scss";
+
+
+.wrapper {
+    .header {
+        @extend .header;
+    }
+
+    .content {
+        width:100%;
+        order:2;
+        
+        .promotion {
+            @include background(travel3);
+            @include quote-settings;
+            text-align: center;
+            height:500px;
+            width:100%;
+            position: relative;
+        }
+        .routes {
+            @include basic-width-and-margin(90%,20px auto);
+            height:500px;
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,1fr);
+            grid-gap: 20px;
+            @extend .grid-position-routes-2;
+            .popRoutes {
+                h3 {
+                    @include font-settings(24px,Arial);
+                }
+                p {
+                    @include font-settings(16px,Arial);
+                    margin:2px auto;
+                }
+            }
+
+            @each $number in 1,2,3,4,5,6 {
+                .routeImg-#{$number} {
+                    @include background(#{$number});
+                    @include title-link-settings;
+                    position: relative;
+                }
+            }
+ 
+            .routeImg-1:hover,.routeImg-2:hover,.routeImg-3:hover,
+            .routeImg-4:hover,.routeImg-5:hover,.routeImg-6:hover {
+               @include link-after-block-hover;
+            }
+
+        }
+
+        .usefulArticles {
+            @include basic-width-and-margin(90%,20px auto);
+            height:500px;
+            display:grid;
+            grid-gap:20px;
+            grid-template-rows:100px 1fr 100px;
+            grid-template-columns: repeat(3,1fr);
+
+            @each $number in 1,2,3 {
+                .articleBlock-#{$number} {
+                    @include background(article#{$number});
+                    @include title-link-settings;
+                    position: relative;
+                }
+            }
+
+            h2 {
+                text-align : center;
+                @include grid-element-position(1,2);
+                @include font-settings(30px,Arial);
+            }
+
+            .articleBlock-1 {
+                @include grid-element-position(2,1/2);
+
+            }
+            .articleBlock-2{
+                @include grid-element-position(2,2/3);
+              
+            }
+            .articleBlock-3 {
+                @include grid-element-position(2,3/4);
+            }
+
+            .articleBlock-1:hover,.articleBlock-2:hover,.articleBlock-3:hover {
+                @extend %articleBlock-hover-effects;
+            }
+
+
+            .button {
+                @include grid-element-position(3,2);
+                @include link-effects(black,$color-palette2);
+                @include font-settings(24px,Arial);
+                text-align: center;
+            }
+        }
+
+    }
+     
+}
+
+

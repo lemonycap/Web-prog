@@ -1,0 +1,54 @@
+@import "src/sass/styles.scss";
+
+.wrapper2 {
+    width:100%;
+    .title {
+        @include background(travel3);
+        @include quote-settings;
+        height:500px;
+        position:relative;
+    }
+
+    .categories-ext-lists {
+        @include basic-width-and-margin(100%,20px auto);
+        @include font-settings (18px, Arial);
+        text-align: center;
+        .categoryForm { 
+            display:grid;
+            grid-template-columns: repeat(5,1fr);
+                .sect1 {
+                width:100px;
+                height:30px;
+                 }
+            }
+    }
+
+    .search-routes {
+        @include basic-width-and-margin(90%,20px auto);
+        display:grid;
+        height:700px;
+        grid-template: repeat(3,1fr)/repeat(6,1fr);
+        grid-gap:20px;
+        @extend .grid-position-search-1;
+
+        @each $number in 1,2,3,4,5,6,7,8,9 {
+            .search-#{$number} {
+                @include background(search#{$number});
+                @include title-link-settings;
+                position: relative;
+            }
+        }
+
+        .search-1:hover,.search-2:hover,.search-3:hover,
+            .search-4:hover,.search-5:hover,.search-6:hover,
+            .search-7:hover,.search-8:hover,.search-9:hover {
+               @include link-after-block-hover;
+            }
+    }
+
+    .viewMore {
+        text-align:center;
+        @include link-effects(black,$color-palette2);
+        @include font-settings(24px,Arial);
+    }
+}

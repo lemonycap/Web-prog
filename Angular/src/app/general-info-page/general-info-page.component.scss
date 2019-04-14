@@ -1,0 +1,99 @@
+@import "src/sass/styles.scss";
+.wrapper3{
+
+    .main {
+        @include basic-width-and-margin(100%,20px auto);
+        
+        .placeImage {
+            @include background(place2);
+            background-repeat:  no-repeat;
+            height:500px;
+            width:100%;
+        }
+
+        .details {
+            @include basic-width-and-margin(90%,20px auto);
+            
+            h3{
+                text-align:center;
+                @include font-settings(27px,Arial);
+            }
+
+            p{
+                @include font-settings(16px,Arial);
+            }
+        }
+        .photos {
+           @include basic-width-and-margin(80%,20px auto);
+            h3{
+                text-align:center;
+                @include font-settings(27px,Arial);
+            }
+            .slider{ 
+                height:600px;
+                width:100%;
+
+            input {
+                display: none;
+            }
+            
+            position: relative;
+           
+           overflow:hidden;
+          
+            .slide {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                
+
+                img {
+                    width:inherit;
+                    height:inherit;
+                }
+            }
+
+            .nav-buttons {
+                width: 100%;
+		        bottom: 5%;
+                height: 11px;
+                position: absolute;
+                text-align: center;
+                z-index: 99;
+                cursor: default;
+
+                .buttons {
+                    width: 10px;
+                    height: 10px;
+                    margin: 0 3px;
+                    position: relative;
+                    border-radius: 100%;
+                    display: inline-block;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    transition: .4s;
+                    cursor: pointer; 
+                }
+
+                #button1:hover {background: $color-palette1;}
+                #button2:hover {background: $color-palette2;}
+                #button3:hover {background: $color-palette3;}
+            }
+        }
+        }
+        #i1:checked ~ #one,
+        #i2:checked ~ #two,
+        #i3:checked ~ #three {
+            z-index: 9;
+            animation: scroll 1s ease-in-out;
+        }
+        #i1:checked ~ .nav-buttons #button1 {background: $color-palette1;}
+        #i2:checked ~ .nav-buttons #button2 {background: $color-palette2;}
+        #i3:checked ~ .nav-buttons #button3 {background: $color-palette3;}
+
+
+    }
+
+}
