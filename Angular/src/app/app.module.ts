@@ -12,10 +12,12 @@ import { SearchPageComponent } from './search-page/search-page.component';
 import { GeneralInfoPageComponent } from './general-info-page/general-info-page.component';
 import {MenuTabComponent} from './menu-tab/menu-tab.component';
 import { from } from 'rxjs';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 const appRoutes: Routes = [
-  { path: 'home',component: MainPageComponent },
+  { path: '',component: MainPageComponent },
   { path: 'routes',component: SearchPageComponent },
   { path: 'articles',component: GeneralInfoPageComponent },
 ];
@@ -26,7 +28,9 @@ const appRoutes: Routes = [
     MainPageComponent,
     SearchPageComponent,
     GeneralInfoPageComponent,
-    MenuTabComponent
+    MenuTabComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     RouterModule.forRoot(

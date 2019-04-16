@@ -1,5 +1,4 @@
 
-
 .header {
  @include font-settings(25px,Arial);
 order:1;
@@ -7,12 +6,29 @@ width:100%;
 border-bottom: 1px solid #ccc;
 font-size:24px;
 display: grid;
+//position: absolute;
 grid-template:100%/repeat(12,1fr);
 align-items: center;
 .logo {
     @include grid-element-position(1,1);
     img {max-width:100%;}
 }
+
+
+/*.menu {
+    @include grid-element-position(1,8/span 4);
+    @include font-settings(20px,Arial);
+    @include link-effects($color-palette3,$color-palette2);
+  //  align-items: center;
+    //padding: .4rem;
+   // width:100%;
+  // margin-left:auto;
+    .menuLinks {
+       // margin-left:auto;
+        max-width:50px;
+        text-decoration: none;
+    }
+}*/
 .mainMenu{
     @include grid-element-position(1,8/span 4);
     margin-left: auto;

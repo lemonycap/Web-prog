@@ -1,1 +1,37 @@
 @import "src/sass/styles.scss";
+
+.menu {
+    @include grid-element-position(1,8/span 4);
+    @include font-settings(20px,Arial);
+    @include link-effects($color-palette3,$color-palette2);
+    //white-space: normal;
+    align-items: center;
+    padding: .4rem;
+   // width:100%;
+   margin-left:auto;
+    
+        .menuLinks {
+            margin-left:auto;
+            max-width:50px;
+            text-decoration: none;
+        }
+    
+}
+
+.mainMenu{
+    @include grid-element-position(1,8/span 4);
+    margin-left: auto;
+    align-items: center;
+    
+    li {
+        text-align:center;
+        display:inline-block;
+        padding: .4rem;
+        font-size:22px;
+        @include link-effects($color-palette3,$color-palette2);
+        a{
+            padding:10px;
+            text-decoration: none;
+        }
+    }
+}

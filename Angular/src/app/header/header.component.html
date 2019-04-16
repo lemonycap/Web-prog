@@ -1,0 +1,26 @@
+<header class="header">
+  <a href="#" class="logo"><img class="backimage" src="assets/images/logo.jpg"></a>
+ <!--- <nav mat-tab-nav-bar class="menu">
+    <a mat-tab-link class="menuLinks"
+       *ngFor="let link of navLinks"
+       [routerLink]="link.path"
+       routerLinkActive #rla="routerLinkActive"
+       [active]="rla.isActive">
+      {{link.label}}
+    </a>
+  </nav>-->
+  <ul class="mainMenu">
+    <li class="menuElement">
+        <a routerLink="/"  routerLinkActive="active" class="menuElement">Home</a>
+    </li>
+    <li class="menuElement">
+        <a routerLink="/routes"  routerLinkActive="active" class="menuElement">All routes</a>
+    </li>
+    <li class="menuElement">
+        <a routerLink="/articles"  routerLinkActive="active"  class="menuElement">Articles</a>
+    </li>
+  </ul>
+  
+</header>
+
+<router-outlet></router-outlet>
