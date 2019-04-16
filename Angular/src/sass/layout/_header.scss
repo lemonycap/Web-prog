@@ -23,7 +23,7 @@ align-items: center;
         display:inline-block;
         padding: .4rem;
         font-size:22px;
-        @include link-effects(black,$color-palette2);
+        @include link-effects($color-palette3,$color-palette2);
         a{
             padding:10px;
             text-decoration: none;
