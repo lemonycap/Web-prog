@@ -1,0 +1,48 @@
+@import "src/sass/styles.scss";
+
+
+.class3{
+    @extend .grid-position-routes-3;
+  }
+    
+    .class1{
+      @extend.grid-position-routes-1;
+    }
+
+    .class2 {
+      @extend .grid-position-routes-2;
+    }
+
+    .routes {
+      @include basic-width-and-margin(90%,30px auto);
+      height:500px;
+      display:grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: repeat(3,1fr);
+      grid-gap: 20px;
+      @extend .grid-position-routes-1;
+      .popRoutes {
+          h3 {
+              @include font-settings(24px,Arial);
+          }
+          p {
+              @include font-settings(16px,Arial);
+              margin:2px auto;
+          }
+      }
+
+      @each $number in 1,2,3,4,5,6 {
+          .routeImg-#{$number} {
+              @include background(#{$number});
+              @include title-link-settings;
+              position: relative;
+          }
+      }
+
+      .routeImg-1:hover,.routeImg-2:hover,.routeImg-3:hover,
+      .routeImg-4:hover,.routeImg-5:hover,.routeImg-6:hover {
+         @include link-after-block-hover;
+      }
+
+  }
+ 

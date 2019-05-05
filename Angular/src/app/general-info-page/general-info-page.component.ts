@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-general-info-page',
@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./general-info-page.component.scss']
 })
 export class GeneralInfoPageComponent implements OnInit {
+  testString:String;
 
-  constructor() { }
 
+  constructor() {
+   
+    this.testString = 'font-color:red';
+   }
+
+  
   ngOnInit() {
   }
 

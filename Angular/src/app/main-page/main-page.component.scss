@@ -18,38 +18,32 @@
             width:100%;
             position: relative;
         }
-        .routes {
-            @include basic-width-and-margin(90%,20px auto);
-            height:500px;
-            display:grid;
-            grid-template-columns: repeat(4,1fr);
-            grid-template-rows: repeat(3,1fr);
-            grid-gap: 20px;
-            @extend .grid-position-routes-2;
-            .popRoutes {
-                h3 {
-                    @include font-settings(24px,Arial);
-                }
-                p {
-                    @include font-settings(16px,Arial);
-                    margin:2px auto;
-                }
+     
+       .box {
+        @include basic-width-and-margin(25%,30px auto);
+        .list {
+            width:100%;
+            margin:0;
+            padding: 0;
+            text-align:center;
+            list-style-type: none;
+            width: 20em;
+             li {
+               @include font-settings(24px,Arial);
+               display: inline-block;
+               padding: .4rem;
+               border-radius: 4px;
+               cursor: pointer;
             }
-
-            @each $number in 1,2,3,4,5,6 {
-                .routeImg-#{$number} {
-                    @include background(#{$number});
-                    @include title-link-settings;
-                    position: relative;
-                }
-            }
- 
-            .routeImg-1:hover,.routeImg-2:hover,.routeImg-3:hover,
-            .routeImg-4:hover,.routeImg-5:hover,.routeImg-6:hover {
-               @include link-after-block-hover;
-            }
+            li.selected:hover {
+                background-color: $color-palette2 !important;
+                opacity:0.9;
+                color: white;
+              }
+          }
 
         }
+
 
         .usefulArticles {
             @include basic-width-and-margin(90%,20px auto);
@@ -99,7 +93,10 @@
         }
 
     }
+
      
 }
 
+
+  
 

@@ -1,37 +1,20 @@
 @import "src/sass/styles.scss";
 
-.menu {
-    @include grid-element-position(1,8/span 4);
-    @include font-settings(20px,Arial);
-    @include link-effects($color-palette3,$color-palette2);
-    //white-space: normal;
+mat-tab-group {
+    @include font-settings(21px,Arial);
+    margin-top:20px;
     align-items: center;
-    padding: .4rem;
-   // width:100%;
-   margin-left:auto;
     
-        .menuLinks {
-            margin-left:auto;
-            max-width:50px;
-            text-decoration: none;
-        }
-    
-}
+    /deep/ .mat-tab-label{
+        max-width: 185px;
+        padding: 0 10px;
+     
+    }
 
-.mainMenu{
-    @include grid-element-position(1,8/span 4);
-    margin-left: auto;
-    align-items: center;
-    
-    li {
+    h3{
         text-align:center;
-        display:inline-block;
-        padding: .4rem;
-        font-size:22px;
-        @include link-effects($color-palette3,$color-palette2);
-        a{
-            padding:10px;
-            text-decoration: none;
-        }
+    }
+    h3,p {
+        @include font-settings(18px,Arial);
     }
 }

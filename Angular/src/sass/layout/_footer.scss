@@ -10,7 +10,7 @@
     border-top:1px solid $color-palette2;
         align-items: stretch;
 
-      //  margin:20px auto;
+       margin:5px auto;
     .about {
         @include grid-element-position(1,2/span 3);
         justify-content: center;

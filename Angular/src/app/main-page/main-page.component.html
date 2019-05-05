@@ -3,35 +3,16 @@
       <div class="promotion">
           <h3 class="quote">Better to see something once than hear about it a thousand times</h3>    
       </div>
-      <div class="routes">
-          
-              <div class="popRoutes">
-                  <h3>Popular routes</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                   Ut enim ad minim veniam, quis nostrud exercitation</p>
-              </div>
-              <div class="routeImg-1">
-                      <a href="#">Title </a>
-                
-              </div>
-              <div class="routeImg-2">
-                   <a href="#">Title</a>
-                  
-               </div>
-               <div class="routeImg-3">
-                   <a href="#">Title</a>
-              </div>
-              <div class="routeImg-4">
-                   <a href="#">Title</a>
-              </div>
-              <div class="routeImg-5">
-                   <a href="#">Title</a>
-               </div>
-               <div class="routeImg-6">
-                   <a href="#">Title</a>
-               </div>  
-      </div>
+      <app-route-details [position] ='position'></app-route-details>
+      <div class = "box">
+      <ul class="list">
+        <li *ngFor="let page of list"
+          [class.selected]="page === selectedPage"
+          (click)="onSelect(page)">
+          <span class="badge">{{page.id}}</span>
+        </li>
+     </ul>
+    </div>
       <div class="usefulArticles">
           <h2>Useful articles</h2>
           <div class="articleBlock-1">

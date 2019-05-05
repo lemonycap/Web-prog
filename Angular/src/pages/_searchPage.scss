@@ -46,6 +46,7 @@
 
     .viewMore {
         text-align:center;
+        margin-bottom:30px;
         @include link-effects(black,$color-palette2);
         @include font-settings(24px,Arial);
     }

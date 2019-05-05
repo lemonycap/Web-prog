@@ -23,7 +23,7 @@
             grid-template-columns: repeat(4,1fr);
             grid-template-rows: repeat(3,1fr);
             grid-gap: 20px;
-            @extend .grid-position-routes-2;
+            @extend .grid-position-routes-3;
             .popRoutes {
                 h3 {
                     @include font-settings(24px,Arial);
@@ -48,6 +48,8 @@
             }
 
         }
+
+      
 
         .usefulArticles {
             @include basic-width-and-margin(90%,20px auto);
@@ -93,6 +95,7 @@
                 @include link-effects(black,$color-palette2);
                 @include font-settings(24px,Arial);
                 text-align: center;
+               // margin-top:20px;
             }
         }
 

@@ -14,10 +14,11 @@ import {MenuTabComponent} from './menu-tab/menu-tab.component';
 import { from } from 'rxjs';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { RouteDetailsComponent } from './route-details/route-details.component';
 
 
 const appRoutes: Routes = [
-  { path: '',component: MainPageComponent },
+  { path: '',component: MainPageComponent},
   { path: 'routes',component: SearchPageComponent },
   { path: 'articles',component: GeneralInfoPageComponent },
 ];
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     GeneralInfoPageComponent,
     MenuTabComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RouteDetailsComponent
   ],
   imports: [
     RouterModule.forRoot(
